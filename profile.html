@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путешественник - Личный кабинет</title>
+    <link rel="stylesheet" href="sitee.css">
+</head>
+<body>
+    <!-- Шапка сайта (такая же как на главной) -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Хлебные крошки -->
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a> / <span>Личный кабинет</span>
+            </div>
+
+            <h1>Личный кабинет</h1>
+            
+            <!-- Информация о пользователе -->
+            <section class="user-info-section">
+                <h2>Общая информация</h2>
+                <div class="user-info-grid">
+                    <div class="info-card">
+                        <div class="info-label">ФИО</div>
+                        <div class="info-value">Иванов Иван Петрович</div>
+                        <button class="btn-edit">✎ Изменить</button>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-label">Паспортные данные</div>
+                        <div class="info-value">1234 567890</div>
+                        <button class="btn-edit">✎ Изменить</button>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-label">Телефон</div>
+                        <div class="info-value">+7 (999) 123-45-67</div>
+                        <button class="btn-edit">✎ Изменить</button>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-label">Email</div>
+                        <div class="info-value">ivanov@mail.ru</div>
+                        <button class="btn-edit">✎ Изменить</button>
+                    </div>
+                    
+                    <div class="info-card stats-card">
+                        <div class="stat-item">
+                            <span class="stat-label">Избранных отелей:</span>
+                            <span class="stat-value">12</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Забронировано:</span>
+                            <span class="stat-value">5</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Бронирования -->
+            <section class="bookings-section">
+                <h2>Мои бронирования</h2>
+                
+                <!-- Подтвержденные брони -->
+                <div class="booking-group confirmed">
+                    <h3 class="group-title">✓ Подтверждено</h3>
+                    
+                    <div class="booking-card">
+                        <img src="https://via.placeholder.com/150x100" alt="Отель" class="booking-img">
+                        <div class="booking-info">
+                            <h4>Отель "Москва"</h4>
+                            <p class="location">Россия, Москва</p>
+                            <p class="dates">Заезд: 15.06.2024 | Выезд: 20.06.2024</p>
+                            <p class="price">Стоимость: 45 000 ₽</p>
+                            <p class="cancel-info">Бесплатная отмена до 10.06.2024</p>
+                            <p class="comment">Комментарий: Номер с видом на Кремль</p>
+                            <div class="booking-actions">
+                                <button class="btn-delete">Удалить</button>
+                                <button class="btn-edit">Редактировать</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-card">
+                        <img src="https://via.placeholder.com/150x100" alt="Отель" class="booking-img">
+                        <div class="booking-info">
+                            <h4>Отель "Санкт-Петербург"</h4>
+                            <p class="location">Россия, Санкт-Петербург</p>
+                            <p class="dates">Заезд: 01.07.2024 | Выезд: 05.07.2024</p>
+                            <p class="price">Стоимость: 32 000 ₽</p>
+                            <p class="cancel-info">Платная отмена (10% от стоимости)</p>
+                            <p class="comment">Комментарий: Два номера рядом</p>
+                            <div class="booking-actions">
+                                <button class="btn-delete">Удалить</button>
+                                <button class="btn-edit">Редактировать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Неподтвержденные брони -->
+                <div class="booking-group pending">
+                    <h3 class="group-title">⏳ Не подтверждено</h3>
+                    
+                    <div class="booking-card">
+                        <img src="https://via.placeholder.com/150x100" alt="Отель" class="booking-img">
+                        <div class="booking-info">
+                            <h4>Отель "Сочи Парк"</h4>
+                            <p class="location">Россия, Сочи</p>
+                            <p class="dates">Заезд: 10.08.2024 | Выезд: 20.08.2024</p>
+                            <p class="price">Стоимость: 120 000 ₽</p>
+                            <p class="cancel-info">Ожидает подтверждения</p>
+                            <div class="booking-actions">
+                                <button class="btn-delete">Удалить</button>
+                                <button class="btn-edit">Редактировать</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-card">
+                        <img src="https://via.placeholder.com/150x100" alt="Отель" class="booking-img">
+                        <div class="booking-info">
+                            <h4>Отель "Казань"</h4>
+                            <p class="location">Россия, Казань</p>
+                            <p class="dates">Заезд: 05.09.2024 | Выезд: 08.09.2024</p>
+                            <p class="price">Стоимость: 18 000 ₽</p>
+                            <p class="cancel-info">Ожидает подтверждения</p>
+                            <div class="booking-actions">
+                                <button class="btn-delete">Удалить</button>
+                                <button class="btn-edit">Редактировать</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-contacts">
+                    <div class="footer-logo">Путешественник</div>
+                    <p>Телефон: 8-800-777-55-77</p>
+                    <p>Email: hotel@hotel.ru</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Клиентам</h4>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Партнерам</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-nav">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="register.html">Регистрация</a></li>
+                        <li><a href="login.html">Авторизация</a></li>
+                        <li><a href="profile.html">Личный кабинет</a></li>
+                        <li><a href="search.html">Поиск</a></li>
+                        <li><a href="#">Задать вопрос</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Путешественник. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

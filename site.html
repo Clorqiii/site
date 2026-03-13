@@ -1,11 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Путешественник | Главная</title>
+  <!-- Подключение Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Подключение основных стилей -->
+  <link rel="stylesheet" href="sitee.css">
 </head>
 <body>
+
+  
+  <!-- ШАПКА САЙТА -->
+  <header class="header">
+    <div class="container header__inner">
+      <div class="header__logo">
+        <i class="fas fa-compass"></i>
+        Wanderlust
+      </div>
+      
+      <nav class="nav">
+        <a href="index.html" class="nav__link nav__link--active">Главная</a>
+        <a href="#" class="nav__link">Отели</a>
+        <a href="#" class="nav__link">Туры</a>
+        <a href="#" class="nav__link">Блог</a>
+        <a href="#" class="nav__link">Контакты</a>
+        <li><a href="profile.html">Личный кабинет</a></li>
+      </nav>
+
+      <div class="header__profile">
+        <i class="fas fa-bell"></i>
+        <div class="auth-buttons">
+          <a href="login.html" class="btn btn--outline btn--small">Вход</a>
+          <a href="register.html" class="btn btn--primary btn--small">Регистрация</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- СЛАЙДЕР -->
+    <section class="container">
+      <div class="hero-slider">
+        <div class="slider" id="slider">
+          <div class="slider__slide" style="background-image: linear-gradient(90deg, rgba(0,40,60,0.8) 0%, rgba(0,0,0,0.2) 100%), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+            <div class="slider__content">
+              <h1 class="slider__title">Горы ждут<br>своих героев</h1>
+              <p class="slider__text">Невероятные треки, чистый воздух и полная перезагрузка</p>
+              <a href="#" class="btn btn--primary">Исследовать <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="slider__slide" style="background-image: linear-gradient(90deg, rgba(0,40,60,0.7) 0%, rgba(0,0,0,0.2) 100%), url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+            <div class="slider__content">
+              <h2 class="slider__title">Пляжный рай<br>на любой вкус</h2>
+              <p class="slider__text">Лазурное море, песок и тысячи впечатлений</p>
+              <a href="#" class="btn btn--primary">Выбрать тур <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="slider__slide" style="background-image: linear-gradient(90deg, rgba(0,40,60,0.7) 0%, rgba(0,0,0,0.2) 100%), url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+            <div class="slider__content">
+              <h2 class="slider__title">Мегаполисы<br>нового уровня</h2>
+              <p class="slider__text">Архитектура, шопинг и ночная жизнь</p>
+              <a href="#" class="btn btn--primary">Смотреть отели <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <button class="slider__btn slider__btn--prev" id="prevBtn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider__btn slider__btn--next" id="nextBtn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="slider__dots">
+          <span class="slider__dot active" data-index="0"></span>
+          <span class="slider__dot" data-index="1"></span>
+          <span class="slider__dot" data-index="2"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ФОРМА ПОИСКА -->
+    <section class="container search-section">
+      <div class="search-card">
+        <h3 class="search-card__title">Найдите идеальное путешествие</h3>
+        <form class="search-form">
+          <div class="search-form__group">
+            <label class="search-form__label">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Город / отель</span>
+            </label>
+            <input type="text" class="search-form__input" placeholder="Куда поедем?">
+          </div>
+
+          <div class="search-form__group">
+            <label class="search-form__label">
+              <i class="fas fa-calendar"></i>
+              <span>Заезд</span>
+            </label>
+            <input type="date" class="search-form__input" value="2024-06-01">
+          </div>
+
+          <div class="search-form__group">
+            <label class="search-form__label">
+              <i class="fas fa-calendar"></i>
+              <span>Выезд</span>
+            </label>
+            <input type="date" class="search-form__input" value="2024-06-10">
+          </div>
+
+          <div class="search-form__group">
+            <label class="search-form__label">
+              <i class="fas fa-user"></i>
+              <span>Гости</span>
+            </label>
+            <select class="search-form__input">
+              <option>1 взрослый</option>
+              <option>2 взрослых</option>
+              <option>3 взрослых</option>
+              <option>Семья с детьми</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--large">
+            <i class="fas fa-search"></i> Найти
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- КАРТОЧКИ ОТЕЛЕЙ -->
+    <section class="container hotels">
+      <div class="section-header">
+        <h2 class="section-header__title">Популярные отели</h2>
+        <a href="#" class="section-header__link">Смотреть все <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="hotels__grid">
+        <!-- Карточки отелей (как в предыдущем коде) -->
+        <article class="hotel-card">
+          <!-- содержимое карточки -->
+        </article>
+        <!-- остальные карточки -->
+      </div>
+    </section>
+
+    <!-- ПРЕИМУЩЕСТВА -->
+    <section class="container features">
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-item__icon"><i class="fas fa-tag"></i></div>
+          <h4>Лучшие цены</h4>
+          <p>Гарантируем выгодные предложения от отелей</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__icon"><i class="fas fa-headset"></i></div>
+          <h4>Поддержка 24/7</h4>
+          <p>Поможем в любой точке мира</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item__icon"><i class="fas fa-shield-alt"></i></div>
+          <h4>Безопасная оплата</h4>
+          <p>Ваши данные под защитой</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- НОВОСТНАЯ РАССЫЛКА -->
+    <section class="container">
+      <div class="newsletter">
+        <h3 class="newsletter__title">Ничего не пропускайте</h3>
+        <p class="newsletter__text">Подпишитесь на рассылку и получайте горящие предложения</p>
+        <form class="newsletter__form">
+          <input type="email" class="newsletter__input" placeholder="Ваш email">
+          <button class="btn btn--primary">Подписаться</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <div class="footer__logo">
+          <i class="fas fa-compass"></i> Wanderlust
+        </div>
+        <p class="footer__text">Путешествуйте с комфортом и открывайте мир заново.</p>
+        <div class="socials">
+          <a href="#" class="socials__link"><i class="fab fa-telegram"></i></a>
+          <a href="#" class="socials__link"><i class="fab fa-vk"></i></a>
+          <a href="#" class="socials__link"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Навигация</h4>
+        <ul class="footer__list">
+          <li><a href="#">Отели</a></li>
+          <li><a href="#">Туры</a></li>
+          <li><a href="#">Авиабилеты</a></li>
+          <li><a href="#">Блог</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Поддержка</h4>
+        <ul class="footer__list">
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Помощь</a></li>
+          <li><a href="#">Политика</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Контакты</h4>
+        <ul class="footer__list">
+          <li><i class="fas fa-phone"></i> 8 (800) 555-35-35</li>
+          <li><i class="fas fa-envelope"></i> hello@wanderlust.ru</li>
+          <li><i class="fas fa-clock"></i> Круглосуточно</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2024 Wanderlust. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- СКРИПТЫ -->
+  <script>
+    // Слайдер
+    const slider = document.getElementById('slider');
+    const slides = document.querySelectorAll('.slider__slide');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dots = document.querySelectorAll('.slider__dot');
     
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    function updateSlider() {
+      if (slider) {
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+      
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlider();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlider();
+    }
+
+    if (nextBtn && prevBtn) {
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          currentIndex = index;
+          updateSlider();
+        });
+      });
+
+      setInterval(nextSlide, 6000);
+    }
+  </script>
 </body>
 </html>
